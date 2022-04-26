@@ -16,3 +16,33 @@
 .webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
 .webgl-content .footer .title {margin-right: 10px; float: right;}
 .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+body {
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+ 	.mensaje{
+ 		display: none;
+ 	}
+  @media screen and (orientation: portrait) {
+    .mensaje {
+        font-family:sans-serif;
+      position: fixed;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      background-color: #ffffff;
+        color: white;
+      z-index: 1000;
+    }
+  }
