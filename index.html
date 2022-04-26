@@ -8,28 +8,18 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/demotunja.json", {onProgress: UnityProgress});
-      window.addEventListener("resize", onResize);
-
-        function onResize() {
-            unityInstance.SendMessage("TempleteDebugText", "SetWidth", window.innerWidth);
-            unityInstance.SendMessage("TempleteDebugText", "SetHeight", window.innerHeight);
-            unityInstance.SendMessage("TempleteDebugText", "OnResize");
-        }
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/demotunja01.json", {onProgress: UnityProgress});
     </script>
-
   </head>
   <body>
-      <div class="mensaje">
-          <img class="logo" src="TemplateData/GiraCel.gif"> 
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Videointeractivo</div>
       </div>
-      <script>
-            setTimeout(function(){
-                $("#unityContainer").find("button").click();
-              }, 200);
-      </script> 
-
+    </div>
   </body>
 </html>
